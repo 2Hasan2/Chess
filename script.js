@@ -4,7 +4,7 @@ import ChessAI from "./Classes/ChessAI.js";
 const chess = new Chess("chessboard");
 
 chess.start();
-chess.setInterval();
+chess.setTimer();
 player.textContent = chess.player;
 
 const chessAI = new ChessAI(chess);

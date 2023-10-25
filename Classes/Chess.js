@@ -52,13 +52,11 @@ export default class Chess {
         });
     }
 
-    setInterval() {
-        let timer = setInterval(() => {
-            if (this.over) {
-                clearInterval(timer);
-                return;
+    setTimer() {
+        setInterval(() => {
+            if (!this.over) {
+                this.time++;
             }
-            this.time++;
             const format = (num) => {
                 return num < 10 ? "0" + num : num;
             }
@@ -334,4 +332,3 @@ export default class Chess {
         alert(`Game over! ${winner} wins.`);
     }
 }
-
