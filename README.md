@@ -16,7 +16,7 @@ A simple two-player chess game implemented in JavaScript. Enjoy classic chess on
 
 ## Demo
 
-Play the game [here](https://github.com/2Hasan2/).
+Play the game [here](https://2hasan2.github.io/Chess/).
 
 ## Getting Started
 
