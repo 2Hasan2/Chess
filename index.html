@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <style>
+        :root{
+            --color1: #444;
+            --color2: #fff;
+            --color3:#09f90955;
+            --Cell_size: calc((100vw + 100vh)  / 32);
+            --border_size: calc(var(--Cell_size) / 4);
+            --font_size: calc(var(--Cell_size) /1.5);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        #app{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .chessboard {
+            display: grid;
+            width: fit-content;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            border: var(--border_size) solid black;
+            border-radius: var(--border_size);
+            margin: 0 auto;
+        }
+        .square {
+            width: var(--Cell_size);
+            height: var(--Cell_size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--font_size) ;
+            color: black;
+            font-weight: bold;
+        }
+        .possible{
+            background-color: var(--color3) !important;
+        }
+        .selected{
+            outline: 2px solid red !important;
+            offset: -1px;
+        }
+       
+        #time{
+            font-size: var(--font_size);
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            width: fit-content;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        #player{
+            font-size: var(--font_size);
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            width: fit-content;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <span id="time">00:00:00</span>
+            <span id="player"></span>
+        </div>
+        
+        <div class="chessboard" id="chessboard"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
